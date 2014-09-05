@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content='width=device-width,initial-scale=1,user-scalable=no' name='viewport'>
+    <title>Lossless аудио плеер</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/common.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+      <h3>Lossless аудио плеер</h3>
+      <div class="unsupported">
+        Мы сожалеем, но похоже, что ваш браузер не поддерживает Web Audio API. Пожалуйста, попробуйте другой современный браузер, например Chrome 15+ или Firefox 8+.
+      </div>
+      <div class="player">
+        <div class="info">
+          <div class="tackinfo"><span id="artist"></span> - <span id="title"></span></div>
+          <div class="timer"><span id="time">00:00</span></div>
+        </div>
+        <div class="seekbar" id="seek">
+          <div class="wrap">
+            <div id="buffer"></div>
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="playback">
+            <div id="play" class="fa fa-play"></div>
+            <div class="fb">
+              <div id="backward" class="fa fa-backward"></div>
+              <div id="forward" class="fa fa-forward"></div>
+            </div>
+          </div>
+          <div class="volumebar" id="volume">
+            <div class="wrap">
+              <div id="volumevalue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="debug">
+        <div class="title">+ Информация</div>
+        <div class="body"><pre>Нет информации</pre></div>
+      </div>
+      <div class="poweredby">Используемые технологии:
+        <a href="http://webaudio.github.io/web-audio-api/">Web Audio API</a>,
+        <a href="https://github.com/audiocogs/aurora.js">Aurora.js</a>,
+        <a href="http://jquery.com/">JQuery</a>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/aurora.js"></script>
+    <script src="assets/js/flac.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/common.js"></script>
+  </body>
+</html>
